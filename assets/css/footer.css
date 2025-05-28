@@ -1,0 +1,151 @@
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    height: 956px;
+}
+
+.ft-wrapper-up{
+    height: 100%;
+    width: 100%;
+    background-color: #2b2b2b;
+}
+
+.footer-info-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #e7e7e6;
+    gap: 5rem;
+}
+
+.footer-info{
+    display: flex;
+    gap: 3rem;
+}
+
+.footer-company-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+.footer-company-info p{
+    width: 348px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.footer-company-info a{
+    display: flex;
+    align-items: center;
+    width: 272px;
+    height: 58px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.b1{
+    background-color: #C1B6A4;
+    color: #e7e7e6;
+}
+
+.b2{
+    border: 1px solid #C1B6A4;
+    background-color: transparent;
+    color: #C1B6A4;
+}
+
+.form-news{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.title-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 350px;
+    gap: 1rem;
+}
+
+.cta-news {
+    display: flex;
+    width: 400px;
+    height: 60px;
+}
+
+.cta-news input{
+    width: 100%;
+    height: 100%;
+    padding-left: 1rem;
+}
+.cta-news button{
+    width:111px;
+    height: 100%;
+}
+
+.ft-wrapper-down{
+    height: 80px;
+    background-color: #CC9933;
+}
+
+.footer-down{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.link-footer{
+    display: flex;
+    gap: 2rem;
+}
+
+.link-footer li{
+    list-style: none;
+}
+
+.link-footer li a{
+    font-family: 'SansCondFont', sans-serif;
+    color: #e6dfd3;
+    text-decoration: none;
+}
+
+.social-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-menu li{
+    list-style: none;
+}
+
+.social-icon{
+    width: 40px;
+    height: 40px;
+}
+
+
+/* Responsive menu */
+@media (max-width: 900px) {
+    .footer-info{
+        flex-direction: column;
+    }
+
+    .form-news{
+        flex-direction: column;
+    }
+
+    .title-wrapper{
+        text-align: center;
+        align-items: center;
+    }
+}
