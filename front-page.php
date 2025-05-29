@@ -9,6 +9,7 @@
 <body>
 <?php include 'header.php';?>
 
+<?php get_template_part('templates/home', 'template'); ?>
 
 <?php include 'footer.php';?>
 </body>
