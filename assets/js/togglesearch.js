@@ -1,34 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var searchToggle = document.querySelector('.search-toggle');
-    var searchContainer = document.querySelector('.search-container');
-    var searchInput = document.querySelector('.search-input');
+    // Search toggle logic
+    const searchToggle = document.querySelector('.search-toggle');
+    const searchContainer = document.querySelector('.search-container');
+    const searchInput = document.querySelector('.search-input');
 
     if (searchToggle && searchContainer && searchInput) {
         searchToggle.addEventListener('click', function() {
             searchContainer.classList.toggle('active');
             if (searchContainer.classList.contains('active')) {
-                searchInput.style.display = 'block';
                 searchInput.focus();
-            } else {
-                searchInput.style.display = 'none';
-            }
-        });
-    }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    var searchToggle = document.querySelector('.search-toggle');
-    var searchContainer = document.querySelector('.search-container');
-    var searchInput = document.querySelector('.search-input');
-
-    if (searchToggle && searchContainer && searchInput) {
-        searchToggle.addEventListener('click', function() {
-            searchContainer.classList.toggle('active');
-            if (searchContainer.classList.contains('active')) {
-                searchInput.style.display = 'block';
-                searchInput.focus();
-            } else {
-                searchInput.style.display = 'none';
             }
         });
     }

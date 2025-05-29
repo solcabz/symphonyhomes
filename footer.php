@@ -5,14 +5,13 @@
                 <div class="footer-info-wrapper">
                     <div class="footer-info">
                         <div class="footer-company-info">
-                            <?php 
-                                // $footer_logo = get_option('wp_footer_logo'); 
-                                // if ($footer_logo) {
-                                //     echo '<img src="' . esc_url($footer_logo) . '" alt="Footer Logo">';
-                                // }else{
-                                    
-                                // }
-                            ?>
+                            <?php
+                                $footer_img = get_theme_mod('footer_image');
+                                if ($footer_img) : ?>
+                                    <div class="custom-footer-image">
+                                        <img src="<?php echo esc_url($footer_img); ?>" alt="Footer Image">
+                                    </div>
+                            <?php endif; ?>
                             <p>
                                 15th Floor, Two E-com Center,
                                 Harbor Drive, Mall of Asia Complex,
@@ -32,25 +31,27 @@
                                     <button>SUBMIT</button>
                                 </form>
                             </div>
-                            <div class="sitemap-warpper">
-                                <?php
-                                    $menu = wp_nav_menu([
-                                        'theme_location' => 'secondary',
-                                        'container'      => false,  // Remove the <nav> container
-                                        'menu_class'     => 'nav-links-footer', // Set class for <ul>
-                                        'fallback_cb'    => false, // Avoids showing a default menu if none is assigned
-                                        'echo'           => false  // Get the menu as a string
-                                    ]);
+                            <div>
+                                <div class="sitemap-warpper">
+                                    <?php
+                                        $menu = wp_nav_menu([
+                                            'theme_location' => 'secondary',
+                                            'container'      => false,  // Remove the <nav> container
+                                            'menu_class'     => 'nav-links-footer', // Set class for <ul>
+                                            'fallback_cb'    => false, // Avoids showing a default menu if none is assigned
+                                            'echo'           => false  // Get the menu as a string
+                                        ]);
 
-                                    // Force class on <ul> if not applied
-                                    if ($menu) {
-                                        $menu = preg_replace('/<ul(.*?)>/', '<ul class="sitemap"$1>', $menu, 1);
-                                    } else {
-                                        $menu = '<ul class="nav-links"><li><a href="' . esc_url(home_url('/')) . '">Home</a></li></ul>'; // Added fallback menu
-                                    }
+                                        // Force class on <ul> if not applied
+                                        if ($menu) {
+                                            $menu = preg_replace('/<ul(.*?)>/', '<ul class="sitemap"$1>', $menu, 1);
+                                        } else {
+                                            $menu = '<ul class="nav-links"><li><a href="' . esc_url(home_url('/')) . '">Home</a></li></ul>'; // Added fallback menu
+                                        }
 
-                                    echo $menu;
-                                ?>
+                                        echo $menu;
+                                    ?>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -61,7 +62,7 @@
             </div>
         </div>
         <div class="ft-wrapper-down">
-            <div class="container">
+            <div class="container-down">
                 <div class="footer-down">
                     <?php
                         $menu = wp_nav_menu([

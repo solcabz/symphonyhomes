@@ -95,7 +95,9 @@
 
 .search-container.active .search-input {
     display: block;
+    border: #C1B6A4 1px solid;
 }
+
 
 .cta-wrapper button{
     background-color: #C1B6A4;

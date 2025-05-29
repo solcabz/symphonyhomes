@@ -1,9 +1,13 @@
 <header>
     <div class="container header-wrapper">
         <div class="image-logo">
-             <a href="<?php echo home_url(); ?>">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Symphony Homes Logo">
-            </a>
+            <?php
+            $header_img = get_theme_mod('header_image');
+            if ($header_img) : ?>
+                <a href="<?php echo home_url(); ?>">
+                    <img src="<?php echo esc_url($header_img); ?>" alt="Header Image">
+                </a>
+            <?php endif; ?>
         </div>
         <div class="menu-wrapper">
             <div class="list-menu">
