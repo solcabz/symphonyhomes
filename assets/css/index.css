@@ -1,3 +1,98 @@
 .hero-section{
     height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
+.container-wrap-form{
+    width: 100%;
+    height: 80%;
+    max-width: 1360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.custom-select-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.custom-select-container {
+    position: relative;
+    width: 345px;
+  }
+  
+  .custom-select {
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: white;
+    border: 1px solid #ccc;
+    padding-right: 40px;
+    font-size: 16px;
+    
+  }
+  
+  /* Default arrow */
+  .custom-select-container::after {
+    content: '▼';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform 0.3s ease;
+    pointer-events: none;
+    color: #363636;
+    font-size: 14px;
+  }
+  
+  /* Rotate arrow on focus */
+  .custom-select:focus + .custom-select-container::after,
+  .custom-select-container:has(select:focus)::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  .custom-select option:focus, 
+  .custom-select option:hover {
+    background-color: #0030FF;
+    color: #fff;
+  }
+
+  .property-btn{
+    width: 174px;
+    height: 60px;
+    border: none;
+    background: #C1B6A4;
+    color: #D9D9D9;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  .property-btn:hover{
+    background: #363636;
+  }
+
+
+  /* about section */
+  .about-section{
+    background-color: #E1DACA;
+  }
+  
+  .about-image{
+    width: 100%;
+    max-width: 1300px;
+    height: 780px;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    background-repeat: no-repeat;
+  }

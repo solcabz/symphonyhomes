@@ -4,6 +4,7 @@ header {
     top: 0;
     z-index: 1000; /* Make sure it stays above other elements */
     background-color: white; /* Needed to avoid transparency issues when scrolling */
+    overflow: hidden
 }
 
 .container {
