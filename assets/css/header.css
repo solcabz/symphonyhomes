@@ -1,3 +1,11 @@
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Make sure it stays above other elements */
+    background-color: white; /* Needed to avoid transparency issues when scrolling */
+}
+
 .container {
     width: 100%;
     max-width: 1360px;

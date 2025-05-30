@@ -10,9 +10,9 @@ if (have_rows('hero_section')):
                 <source src="<?php echo esc_url($video_url); ?>" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <!-- <div class="container" style="position: relative; z-index: 1;">
+            <div class="container" style="position: relative; z-index: 1;">
                 <h1>hero</h1>
-            </div> -->
+            </div>
         </section>
         <?php
     endwhile;
