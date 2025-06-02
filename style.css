@@ -25,5 +25,6 @@
     margin: 0;
     font-family: 'smFontLight', sans-serif;
     box-sizing: border-box;
+    font-weight: 300px !important;
 }
 
