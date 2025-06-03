@@ -204,6 +204,8 @@
 /* quote */
 .quote-section {
   height: 100dvh;
+  background-size: cover ;
+  background-repeat: no-repeat;
 }
 
 .quote-container {
@@ -211,6 +213,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  padding-top: 3rem;
   width: 100%;
   height: 100%;
   gap: 2rem;
@@ -255,6 +258,13 @@
   gap: 15px;
 }
 
+
+.quote-select label{
+  color: #fff;
+  text-shadow: 4px 4px 18px rgba(0,0,0,1);
+  font-size: 20px;
+}
+
 .quote-input{
   display: flex;
   flex-direction: column;
@@ -262,6 +272,12 @@
   justify-content: center;
   width: 100%;
   gap: 15px;
+}
+
+.quote-input label{
+  color: #fff;
+  text-shadow: 4px 4px 18px rgba(0,0,0,1);
+  font-size: 20px;
 }
 
 .quote-row {
@@ -315,6 +331,164 @@
   cursor: pointer;
 }
 
+
+/* News */
+.news-section{
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover ;
+  background-repeat: no-repeat;
+}
+
+.news-container{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1360px;
+  padding-top: 2rem;
+}
+
+.news-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  gap: 2rem;
+  padding-top: 1rem;
+}
+
+.news-header h1{
+  font-size: 80px;
+  line-height: 75px;
+  font-weight: 300;
+  width: 333px;
+}
+
+.news-header a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 208px;
+  height: 58px;
+  background-color: #C1B6A4;
+  color: #fff;
+  text-transform: uppercase; /* corrected line */
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.news-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  max-width: 960px;
+  width: 100%;
+  height:100%;
+}
+    
+.news-card1 {
+  max-width: 960px;
+  width: 100%;
+  height: 440px;
+  border-radius: 8px;
+  box-shadow: 0.3em 0.3em 1em rgb(0 0 0 / 60%);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.news-info1{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+}
+
+.news-info1 a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 34px;
+  background-color: #C1B6A4;
+  color: #fff;
+  text-transform: uppercase; /* corrected line */
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.news-card-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.news-card2 {
+  border-radius: 8px;
+  width: 340px;
+  height: 440px;
+  box-shadow: 0.3em 0.3em 1em rgb(0 0 0 / 60%);
+  background-color: #fff;
+  overflow: hidden;
+  padding: 15px 1rem;
+}
+
+.news-card1 img{
+  width: 635px;
+  height: 100%;
+}
+
+.news-card2 img{
+  width: 100%;
+  height: 220px;
+}
+
+.news-info2{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 260px;
+  gap: 3rem;
+}
+
+.news-info2 a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 34px;
+  background-color: #C1B6A4;
+  color: #fff;
+  text-transform: uppercase; /* corrected line */
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+}
+
 /* Responsive adjustments */
 @media (max-width: 480px) {
   .quote-container form {
@@ -340,8 +514,14 @@
   }
 
   .about-content{
-    top: 155%;
+    top: 125%;
     right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .about-content h1{
+    font-size: 60px;
   }
 
   .feature-wrapper{
@@ -350,5 +530,20 @@
     align-items: center;
     justify-content: center;
     gap: 2rem;
+  }
+
+  .news-section{
+    height: 100%;
+  }
+
+  .news-container{
+    flex-direction: column;
+    padding: 2rem 0;
+    height: 100%;
+  }
+
+  .news-header h1{
+    font-size: 60px;
+    text-align: center;
   }
 }

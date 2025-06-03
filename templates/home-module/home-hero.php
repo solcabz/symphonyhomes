@@ -5,7 +5,7 @@ if (have_rows('hero_section')):
         $video_url = is_array($hero_video) ? $hero_video['url'] : $hero_video;
         ?>
         
-        <section class="hero-section" style="position: relative; overflow: hidden;">
+        <section class="hero-section" loading="lazy" style="position: relative; overflow: hidden;">
 
             <!-- Video Background Home -->
             <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
@@ -49,7 +49,7 @@ if (have_rows('hero_section')):
                 </div>
             </div>
         </section>
-        <?php
+<?php
     endwhile;
 endif;
 ?>
