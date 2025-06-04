@@ -102,7 +102,7 @@ header {
 }
 
 
-.search-container.active .search-input {
+.search-container.active {
     display: block;
     border: #C1B6A4 1px solid;
 }
