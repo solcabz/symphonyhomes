@@ -26,7 +26,7 @@ function register_property_post_type() {
         'query_var'          => true,
         'rewrite'            => array('slug' => 'properties'),
         'capability_type'    => 'post',
-        'has_archive'        => true,
+        'has_archive'        => false,
         'hierarchical'       => false,
         'menu_position'      => 5,
         'menu_icon'          => 'dashicons-admin-home',

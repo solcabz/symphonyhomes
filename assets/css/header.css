@@ -27,7 +27,7 @@ header {
 }
 
 .image-logo img{
-    width: 88px;
+    width: 120px;
     height: 100%;
 }
 
@@ -51,23 +51,17 @@ header {
 
 .nav-links a{
     color: #2b2b2b;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 500;
     padding: 0.5rem 1rem;
     text-decoration: none;
 }
 
+
 .cta-wrapper{
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.search-container {
-    position: relative;
-    display: flex;
-    align-items: center;
+    justify-content: flex-end;
     gap: 1rem;
 }
 
@@ -86,25 +80,38 @@ header {
 }
 
 .search-input {
-    margin-left: 8px;
-    height: 36px;
-    border-radius: 4px;
-    border: 1px solid #C1B6A4;
-    padding: 0 8px;
-    font-size: 1rem;
-    display: none; /* Hidden by default */
+   display: none;
 }
 
 .search-input:focus {
     outline: none;
-    border-color: #C1B6A4;
-    box-shadow: 0 0 0 2px #e6dfd3;
 }
 
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0 8px;
+}
+
+.search-input.active{
+    display: block;
+    height: 36px;
+    border-radius: 4px;
+    border: none;
+    padding: 0 8px;
+    font-size: 1rem;
+    width: 100%;
+
+}
 
 .search-container.active {
-    display: block;
     border: #C1B6A4 1px solid;
+    border-radius: 8px;
+    width: 400px;
+    height: 45px;
+    
 }
 
 

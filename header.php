@@ -32,7 +32,7 @@
             </div>
             <div class="cta-wrapper">
                 <div class="search-container">
-                    <input type="search" class="search-input" placeholder="Search..." style="display:none;">
+                    <input type="search" class="search-input" placeholder="Search..." >
                     <img class="search-toggle"  src="<?php echo get_template_directory_uri(); ?>/assets/image/search-icon.png" alt="Search">
                 </div>
                 <button>Get a Quote</button>

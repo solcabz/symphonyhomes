@@ -1,18 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Search toggle logic
+   // Search toggle logic
     const searchToggle = document.querySelector('.search-toggle');
     const searchContainer = document.querySelector('.search-container');
     const searchInput = document.querySelector('.search-input');
 
     if (searchToggle && searchContainer && searchInput) {
-        searchToggle.addEventListener('click', function() {
+        searchToggle.addEventListener('click', function () {
             searchContainer.classList.toggle('active');
+
             if (searchContainer.classList.contains('active')) {
-                searchInput.focus();
+                searchInput.classList.add('active');
+                searchInput.focus(); // Optional: focus the input field
+            } else {
+                searchInput.classList.remove('active');
             }
         });
     }
-
     // Hamburger menu logic
     const hamburger = document.getElementById('navbar-hamburger');
     const menu = document.querySelector('.menu-wrapper');
