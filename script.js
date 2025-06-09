@@ -21,3 +21,27 @@ document.getElementById('menu-toggle').addEventListener('click', function() {
 
   lazyBgSections.forEach(section => observer.observe(section));
 });
+
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  navLinks.forEach(link => {
+    link.addEventListener('mouseleave', () => {
+      const underline = link.querySelector('::after');
+      // Instead of trying to select a pseudo-element directly,
+      // we use a trick: trigger a class toggle on the parent to simulate the out animation
+      link.classList.add('hide');
+      link.querySelector('style')?.remove(); // Clean previous styles
+
+      const style = document.createElement('style');
+      style.textContent = `
+        .nav-links a.hide::after {
+          animation: underline-out 0.4s forwards;
+        }
+      `;
+      document.head.appendChild(style);
+
+      setTimeout(() => {
+        link.classList.remove('hide');
+      }, 400);
+    });
+  });

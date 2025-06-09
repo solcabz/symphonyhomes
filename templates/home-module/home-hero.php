@@ -8,7 +8,7 @@ if (have_rows('hero_section')):
         <section class="hero-section" loading="lazy" style="position: relative; overflow: hidden;">
 
             <!-- Video Background Home -->
-            <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+            <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; ">
                 <source src="<?php echo esc_url($video_url); ?>" type="video/mp4">
                 Your browser does not support the video tag.
             </video>

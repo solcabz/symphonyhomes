@@ -8,7 +8,17 @@
         <div class="feature-wrapper">
             <div class="RFO">
                 <h4>Ready For Occcupancy</h4>
-                <div class="feature-item"></div>
+                <div class="feature-item">
+                    <div class="feature-info">
+                        <div class="flex-col-feat">
+                            <h1>Title</h1>
+                            <div><p>location</p></div>
+                            <div><p>Price</p></div>
+                        </div>
+                        <div><p>ParagraphSMDC Cheerful Homes is a master-planned community with well-designed homes perfect for the modern Filipino family. With over a hectare of open space and a complete set of amenities, residents will find a lot of reasons to be cheerful for!</p></div>
+                        <button>Read More</button>
+                    </div>
+                </div>
                 <div class="feature-item"></div>
             </div>
 

@@ -2,8 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100dvh;
+  min-height: 100vh;
   padding: 2rem;
+  background-color: #fff;
 }
 
 .location-wrapper {
@@ -18,68 +19,60 @@
 .location-wrapper h1 {
   font-size: 80px;
   font-weight: 300;
+  margin-bottom: 1rem;
 }
 
-.location-wrapper p{
+.location-wrapper p {
   font-size: 20px;
+  max-width: 900px;
+  margin-bottom: 2rem;
 }
 
-.carousel-container {
-  position: relative;
+.swiper {
   width: 100%;
-  overflow: hidden;
   max-width: 1158px;
-  margin-top: 2rem;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
+  position: relative;
 }
 
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease;
-  will-change: transform;
-  gap: 1.5rem;
-}
-
-.location-item {
-  min-width: 360px;
-  height: 512px;
+.swiper-slide {
+  min-height: 512px;
   border-radius: 8px;
-  box-shadow: 20px 20px 60px 20px #bebebe;
-  flex-shrink: 0;
   background-color: #f5f5f5;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  background: #C1B6A4;
-  color: #ffffff;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 1;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
 }
 
-.carousel-btn.prev {
-  left: 0.5rem;
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: #C1B6A4;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.carousel-btn.next {
-  right: 0.5rem;
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 18px;
 }
 
 @media (max-width: 768px) {
+
+  .location-section{
+    align-items: flex-start;
+  }
+
   .location-wrapper h1 {
     font-size: 60px;
   }
 
-  .location-item {
-    min-width: 280px;
+  .swiper-slide {
+    min-height: 640px;
   }
 }
