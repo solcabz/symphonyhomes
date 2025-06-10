@@ -12,7 +12,6 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 1360px;
   text-align: center;
 }
 
@@ -30,20 +29,42 @@
 
 .swiper {
   width: 100%;
-  max-width: 1158px;
   padding: 0 1rem;
   position: relative;
 }
 
 .swiper-slide {
-  min-height: 512px;
+  min-height: 380px;
   border-radius: 8px;
-  background-color: #f5f5f5;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 32px;
-  font-weight: bold;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 2rem 1rem;
+}
+
+.swiper-slide h3 {
+  font-size: 36px;
+  font-style: normal;
+  letter-spacing: 3px;
+  font-weight: 400;
+  text-align: start;
+  width: 100%;
+  white-space: pre-line;
+}
+
+.location-item{
+  display: flex;
+  color: #ffffff;
+  gap: 1rem;
+}
+
+.location-button{
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  background-color: #C1B6A4;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .swiper-button-prev,
