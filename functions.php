@@ -63,4 +63,36 @@ function my_theme_enqueue_fonts() {
 }
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_fonts');
 
+// Helper function to format price as a range with peso sign, e.g., '₱2,000,000 - ₱1,800,000', or just '₱' if empty/null
+function format_peso_range($price) {
+    $peso_sign = '₱';
+    if (empty($price)) {
+        return $peso_sign;
+    }
+    // Check if price contains a dash (range)
+    if (strpos($price, '-') !== false) {
+        $parts = explode('-', $price);
+        $min = trim($parts[0]);
+        $max = trim($parts[1]);
+        $min_clean = preg_replace('/[^0-9.]/', '', $min);
+        $max_clean = preg_replace('/[^0-9.]/', '', $max);
+        $min_fmt = $min_clean !== '' ? number_format((float)$min_clean) : '';
+        $max_fmt = $max_clean !== '' ? number_format((float)$max_clean) : '';
+        if ($min_fmt && $max_fmt) {
+            return $peso_sign . $min_fmt . ' - ' . $peso_sign . $max_fmt;
+        } elseif ($min_fmt) {
+            return $peso_sign . $min_fmt;
+        } elseif ($max_fmt) {
+            return $peso_sign . $max_fmt;
+        } else {
+            return $peso_sign;
+        }
+    } else {
+        // Single price
+        $clean_price = preg_replace('/[^0-9.]/', '', $price);
+        $formatted = $clean_price !== '' ? number_format((float)$clean_price) : '';
+        return $formatted ? ($peso_sign . $formatted) : $peso_sign;
+    }
+}
+
 ?>

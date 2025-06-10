@@ -84,14 +84,17 @@
 
   /* about section */
   .about-section{
+    height: 100dvh;
     background-color: #E1DACA;
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 2rem;
   }
   
   .about-image{
-    position: relative;
     width: 100%;
     max-width: 1300px;
-    height: 780px;
+    height: 100%;
     background-size: cover;
     background-position: right center;
     align-items: center;
@@ -100,12 +103,8 @@
   }
 
   .about-content {
-    position: absolute;
-    top: 50%;
-    right: -4rem;
-    transform: translateY(-50%); /* To center vertically */
     width: 660px;
-    height: 660px;
+    height: 760px;
     background-color: #ffffff;
     border-radius: 20px;
     padding: 3rem 1.5rem;
@@ -200,7 +199,7 @@
 .feature-item {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 2;
+  height: 426.66px;
   border-radius: 20px;
   box-shadow: 0.3em 0.3em 1em rgb(0 0 0 / 50%);
   overflow: hidden;

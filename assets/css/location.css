@@ -16,7 +16,7 @@
 }
 
 .location-wrapper h1 {
-  font-size: 80px;
+  font-size: 90px;
   font-weight: 300;
   margin-bottom: 1rem;
 }
@@ -34,7 +34,7 @@
 }
 
 .swiper-slide {
-  min-height: 380px;
+  min-height: 680px;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
