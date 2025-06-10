@@ -30,6 +30,28 @@ function add_location_thumbnail_support() {
     add_theme_support('post-thumbnails', ['location']);
 }
 
+// Register a custom taxonomy for Location
+add_action('init', function() {
+    register_taxonomy('location_category', 'location', [
+        'labels' => [
+            'name' => 'Location Categories',
+            'singular_name' => 'Location Category',
+            'search_items' => 'Search Location Categories',
+            'all_items' => 'All Location Categories',
+            'edit_item' => 'Edit Location Category',
+            'update_item' => 'Update Location Category',
+            'add_new_item' => 'Add New Location Category',
+            'new_item_name' => 'New Location Category Name',
+            'menu_name' => 'Location Categories',
+        ],
+        'hierarchical' => true,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'rewrite' => ['slug' => 'location-category'],
+        'show_in_rest' => true,
+    ]);
+});
+
 // 3. Shortcode to Display Locations in a Grid
 add_shortcode('locations_grid', 'display_all_locations');
 function display_all_locations() {
@@ -77,6 +99,18 @@ function display_all_locations() {
             font-weight: 600;
             font-size: 1.1em;
         }
+        .location-taxonomies {
+            margin-top: 8px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .location-taxonomy {
+            display: inline-block;
+            background-color: #f1f1f1;
+            border-radius: 4px;
+            padding: 4px 8px;
+            margin: 0 4px;
+        }
     </style>
     <div class="locations-grid">
         <?php while ($locations->have_posts()): $locations->the_post(); ?>
@@ -87,6 +121,16 @@ function display_all_locations() {
                     </a>
                 <?php endif; ?>
                 <div class="location-name"><?php the_title(); ?></div>
+                <?php
+                $terms = get_the_terms(get_the_ID(), 'location_category');
+                if ($terms && !is_wp_error($terms)) {
+                    echo '<div class="location-taxonomies">';
+                    foreach ($terms as $term) {
+                        echo '<span class="location-taxonomy">' . esc_html($term->name) . '</span> ';
+                    }
+                    echo '</div>';
+                }
+                ?>
             </div>
         <?php endwhile; wp_reset_postdata(); ?>
     </div>

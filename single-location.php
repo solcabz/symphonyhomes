@@ -9,7 +9,13 @@
 <body>
 <?php include 'header.php';?>
 
-<h1><?php the_title(); ?></h1>
+<section>
+    <?php if (have_posts()): while (have_posts()): the_post(); ?>
+    <h1 style="text-align:center; margin: 60px 0 40px 0; font-size:2.5rem; font-weight:700; letter-spacing:1px;">
+        <?php the_title(); ?>
+    </h1>
+<?php endwhile; endif; ?>
+</section>
 
 <?php include 'footer.php';?>
 </body>
