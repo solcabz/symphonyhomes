@@ -13,8 +13,12 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <?php include get_template_directory() . '../header.php'; ?>
-    <?php include get_template_directory() . '../footer.php'; ?>
+    <?php get_header('header.php');?>
+
+    <?php include get_template_directory() . '/templates/about-module/about-hero.php'; ?>
+    <?php include get_template_directory() . '/templates/news-module/news-inquiry-form.php'; ?>
+
+    <?php get_footer('footer.php');?>
 </body>
 <?php wp_footer(); ?>
 </html>

@@ -96,7 +96,7 @@
                                 </div>
                                 <!-- Add more info if needed -->
                                  <div><p>ParagraphSMDC Cheerful Homes is a master-planned community with well-designed homes perfect for the modern Filipino family. With over a hectare of open space and a complete set of amenities, residents will find a lot of reasons to be cheerful for!</p></div>
-                                <button>Read More</button>
+                                <a class="location-button">Read More</a>
                             </div>
                         </div>
                         <?php

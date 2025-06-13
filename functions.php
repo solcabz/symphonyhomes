@@ -7,6 +7,7 @@ require_once get_template_directory() . '/functions/social-links.php';
 require_once get_template_directory() . '/functions/logo-settings.php';
 require_once get_template_directory() . '/functions/swiper-settings.php';
 require_once get_template_directory() . '/functions/location-settings.php';
+require_once get_template_directory() . '/functions/breadcrumbs-settings.php';
 
 function my_theme_enqueue_styles() {
     wp_enqueue_style('theme-style', get_template_directory_uri() . "/style.css", array(), '2.1', 'all');
@@ -94,5 +95,20 @@ function format_peso_range($price) {
         return $formatted ? ($peso_sign . $formatted) : $peso_sign;
     }
 }
+
+
+add_filter('acf/load_field/name=article_locator', function($field) {
+    $field['choices'] = [];
+    $locations = get_posts([
+        'post_type' => 'location',
+        'posts_per_page' => -1,
+        'orderby' => 'title',
+        'order' => 'ASC'
+    ]);
+    foreach ($locations as $location) {
+        $field['choices'][$location->ID] = $location->post_title;
+    }
+    return $field;
+});
 
 ?>

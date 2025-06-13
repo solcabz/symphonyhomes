@@ -10,22 +10,22 @@ $args = [
 $good_life_query = new WP_Query($args);
 ?>
 
-<section class="news-section">
+<section>
   <!-- Carousel Wrapper -->
   <div class="custom-carousel">
     <div class="carousel-slides">
       <?php 
       $slide_index = 0;
       while ($good_life_query->have_posts()): $good_life_query->the_post();
-          $news_group = get_field('news_hero');
-          $news_image = isset($news_group['news_image']) ? $news_group['news_image'] : null;
-          $news_sub_headline = isset($news_group['sub_headline']) ? $news_group['sub_headline'] : get_the_date();
-          $bg_url = $news_image ? esc_url($news_image['url']) : esc_url(get_template_directory_uri() . '/assets/image/default-image.jpg');
+        $article_hero = get_field('article_hero');
+        $locator = isset($article_hero['article_locator']) ? $article_hero['article_locator'] : '';
+        $sub_heading = isset($article_hero['article_sub_heading']) ? $article_hero['article_sub_heading'] : '';
+        $hero_img = isset($article_hero['article_hero']['url']) ? $article_hero['article_hero']['url'] : get_template_directory_uri() . '/assets/image/placeholder.png';
       ?>
-        <div class="carousel-slide" style="background-image: url('<?php echo $bg_url; ?>');">
+        <div class="carousel-slide" style="background-image: url('<?php echo esc_url($hero_img); ?>');">
           <div class="carousel-content">
             <h2><?php the_title(); ?></h2>
-            <p><?php echo esc_html($news_sub_headline); ?></p>
+            <p><?php echo esc_html($sub_heading); ?></p>
             <a href="<?php the_permalink(); ?>" class="read-more">READ MORE</a>
           </div>
         </div>

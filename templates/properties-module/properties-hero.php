@@ -7,6 +7,7 @@ if (have_rows('properties_section')):
         $properties_hero_image_url = is_array($properties_image) ? $properties_image['url'] : $properties_image;
         ?>
 
+
         <section class="properties-hero-section">
             <?php if ($properties_hero_image_url): ?>
                 <img class="properties-hero-image" src="<?php echo esc_url($properties_hero_image_url); ?>" alt="Hero Image">
