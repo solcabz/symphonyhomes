@@ -16,6 +16,7 @@
     <?php get_header('header.php');?>
 
     <?php include get_template_directory() . '/templates/about-module/about-hero.php'; ?>
+    <?php include get_template_directory() . '/templates/about-module/about-symphony.php'; ?>
     <?php include get_template_directory() . '/templates/news-module/news-inquiry-form.php'; ?>
 
     <?php get_footer('footer.php');?>
